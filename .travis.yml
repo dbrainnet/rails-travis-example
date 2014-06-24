@@ -12,7 +12,7 @@ before_script:
   - ./set_token.sh
   - bundle exec rake db:migrate
   - bundle exec rails s -d
-script:
+script: 
   - bundle exec rake secure_pipeline:network_attack
   - bundle exec rake secure_pipeline:ssl_attack
-
+  - bundle exec rake secure_pipeline:xss
